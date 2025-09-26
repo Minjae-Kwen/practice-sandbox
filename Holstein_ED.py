@@ -59,5 +59,7 @@ el_ph_matrix *= g
 
 H_matrix = hop_matrix + phonon_matrix + el_ph_matrix
 
-eigvals, eigvecs = eigsh(H_matrix, k=3, which='SA')
-print("Eigenvalues: "+str(eigvals))
+eigvals, eigvecs = eigsh(H_matrix, k=5, which='SA')
+#print("Eigenvalues: "+str(eigvals))
+D=np.diag(eigvals)
+print(D)
